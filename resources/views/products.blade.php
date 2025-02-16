@@ -10,6 +10,8 @@
   <body>
     <h1>CRUD project with Ajax</h1>
 
+<a href="" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Add Product</a>
+
 <table>
     <tr>
         <th>ID</td>
@@ -29,26 +31,15 @@
         <td>()</td>
         <th>|</td>
         <td>
-            <a href=""> <i class="las la-edit"></i> </a>
-            <a href=""><i class="las la-trash-alt"></i> </a> </td>
+            <a href="#"> <i class="las la-edit"></i> </a>
+            <a href="#"><i class="las la-trash-alt"></i> </a> </td>
         <th>|</td>
     </tr>
 
 </table>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-</script>
-<script>
-    $(document).ready(function() {
-       alert('Hi'); 
-    });
-</script>
+@include('add_product')
+@include('product_js')
 
   </body>
 </html>
