@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/',[productController::class, 'index'])->name('products');
+Route::get('/user',[productController::class,'view_data']);
